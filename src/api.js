@@ -7,5 +7,5 @@ const getData = (url) =>
     throw new Error(res.statusText);
   });
 
-export const fetchSeveralUsers = (url, qOfUsers) =>
-  getData(url + qOfUsers).then(({ results }) => results);
+export const fetchSeveralUsers = (url, quantityOfUsers) =>
+  getData(url + quantityOfUsers).then(({ results }) => results);

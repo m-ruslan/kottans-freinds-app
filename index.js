@@ -2,7 +2,7 @@ import { fetchSeveralUsers } from "./src/api.js";
 import { makeUsersList } from "./src/list.js";
 import { initSortAndFilter } from "./src/sorter.js";
 
-const quantityOfUsers = 50;
+const QUANTITY_OF_USERS = 50;
 const URL = "https://randomuser.me/api/?results=";
 
 const wrapper = document.getElementById("wrapper");
@@ -19,7 +19,7 @@ const drawUsers = (users) => {
 };
 
 const start = () => {
-  fetchSeveralUsers(URL, quantityOfUsers).then((users) => {
+  fetchSeveralUsers(URL, QUANTITY_OF_USERS).then((users) => {
     drawUsers(users);
 
     const handleChange = initSortAndFilter(users, drawUsers, "sortersChange");
